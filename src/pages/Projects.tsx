@@ -16,7 +16,7 @@ const Projects = () => {
       title: "SmartDrain",
       description: "As part of this vision, I've already started working on an innovative idea called SmartDrain — a web application designed to monitor drainage conditions and predict flood risks in real time.",
       image: "/SmartDrain.png",
-      tech: ["React", "Mongo", "Node", "Express"],
+      tech: ["React", "Mongo", "Node", "Express", "Tailwind"],
       github: "https://github.com",
       demo: "https://demo.com"
     },
