@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,7 +14,7 @@ const Projects = () => {
     },
     {
       title: "SmartDrain",
-      description: "As part of this vision, I’ve already started working on an innovative idea called SmartDrain — a web application designed to monitor drainage conditions and predict flood risks in real time.",
+      description: "As part of this vision, I've already started working on an innovative idea called SmartDrain — a web application designed to monitor drainage conditions and predict flood risks in real time.",
       image: "/SmartDrain.png",
       tech: ["React", "Mongo", "Express", "Node"],
       github: "https://github.com",
