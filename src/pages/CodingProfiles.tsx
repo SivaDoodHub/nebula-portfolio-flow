@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,76 +9,52 @@ const CodingProfiles = () => {
       name: "GitHub",
       description: "Open source projects and contributions",
       icon: Github,
-      stats: "200+ repositories, 1k+ contributions",
-      url: "https://github.com/yourusername",
+      stats: "2+ repositories",
+      url: "https://github.com/SivaDoodHub",
       color: "from-gray-600 to-gray-800",
       hoverColor: "hover:from-gray-500 hover:to-gray-700"
     },
-    {
-      name: "LeetCode",
-      description: "Problem solving and algorithmic challenges",
-      icon: () => (
-        <div className="w-6 h-6 bg-orange-500 rounded flex items-center justify-center text-white font-bold text-sm">
-          LC
-        </div>
-      ),
-      stats: "500+ problems solved, Contest Rating: 1800+",
-      url: "https://leetcode.com/yourusername",
-      color: "from-orange-500 to-red-600",
-      hoverColor: "hover:from-orange-400 hover:to-red-500"
-    },
-    {
-      name: "CodePen",
-      description: "Frontend experiments and demos",
-      icon: () => (
-        <div className="w-6 h-6 bg-green-500 rounded flex items-center justify-center text-white font-bold text-xs">
-          CP
-        </div>
-      ),
-      stats: "100+ pens, 50k+ views",
-      url: "https://codepen.io/yourusername",
-      color: "from-green-500 to-emerald-600",
-      hoverColor: "hover:from-green-400 hover:to-emerald-500"
-    },
-    {
-      name: "Stack Overflow",
-      description: "Helping the developer community",
-      icon: () => (
-        <div className="w-6 h-6 bg-orange-400 rounded flex items-center justify-center text-white font-bold text-xs">
-          SO
-        </div>
-      ),
-      stats: "5k+ reputation, 200+ answers",
-      url: "https://stackoverflow.com/users/youruserid",
-      color: "from-orange-400 to-yellow-500",
-      hoverColor: "hover:from-orange-300 hover:to-yellow-400"
-    },
-    {
-      name: "HackerRank",
-      description: "Competitive programming challenges",
-      icon: () => (
-        <div className="w-6 h-6 bg-green-600 rounded flex items-center justify-center text-white font-bold text-xs">
-          HR
-        </div>
-      ),
-      stats: "5-star rating in multiple domains",
-      url: "https://hackerrank.com/yourusername",
-      color: "from-green-600 to-green-800",
-      hoverColor: "hover:from-green-500 hover:to-green-700"
-    },
-    {
-      name: "Codewars",
-      description: "Coding kata and skill improvement",
-      icon: () => (
-        <div className="w-6 h-6 bg-red-600 rounded flex items-center justify-center text-white font-bold text-xs">
-          CW
-        </div>
-      ),
-      stats: "2 kyu rank, 1000+ kata completed",
-      url: "https://codewars.com/users/yourusername",
-      color: "from-red-600 to-red-800",
-      hoverColor: "hover:from-red-500 hover:to-red-700"
-    }
+    // {
+    //   name: "LeetCode",
+    //   description: "Problem solving and algorithmic challenges",
+    //   icon: () => (
+    //     <div className="w-6 h-6 bg-orange-500 rounded flex items-center justify-center text-white font-bold text-sm">
+    //       LC
+    //     </div>
+    //   ),
+    //   stats: "500+ problems solved, Contest Rating: 1800+",
+    //   url: "https://leetcode.com/yourusername",
+    //   color: "from-orange-500 to-red-600",
+    //   hoverColor: "hover:from-orange-400 hover:to-red-500"
+    // },
+
+
+    // {
+    //   name: "HackerRank",
+    //   description: "Competitive programming challenges",
+    //   icon: () => (
+    //     <div className="w-6 h-6 bg-green-600 rounded flex items-center justify-center text-white font-bold text-xs">
+    //       HR
+    //     </div>
+    //   ),
+    //   stats: "5-star rating in multiple domains",
+    //   url: "https://hackerrank.com/yourusername",
+    //   color: "from-green-600 to-green-800",
+    //   hoverColor: "hover:from-green-500 hover:to-green-700"
+    // },
+    // {
+    //   name: "Codewars",
+    //   description: "Coding kata and skill improvement",
+    //   icon: () => (
+    //     <div className="w-6 h-6 bg-red-600 rounded flex items-center justify-center text-white font-bold text-xs">
+    //       CW
+    //     </div>
+    //   ),
+    //   stats: "2 kyu rank, 1000+ kata completed",
+    //   url: "https://codewars.com/users/yourusername",
+    //   color: "from-red-600 to-red-800",
+    //   hoverColor: "hover:from-red-500 hover:to-red-700"
+    // }
   ];
 
   return (
@@ -107,7 +82,11 @@ const CodingProfiles = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={
+          profiles.length === 1
+            ? "flex justify-center items-center min-h-[300px]"
+            : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        }>
           {profiles.map((profile, index) => (
             <motion.div
               key={profile.name}
@@ -127,7 +106,7 @@ const CodingProfiles = () => {
                   >
                     <profile.icon />
                   </motion.div>
-                  
+
                   <CardTitle className="text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-200 group-hover:bg-clip-text transition-all duration-300">
                     {profile.name}
                   </CardTitle>
@@ -140,7 +119,7 @@ const CodingProfiles = () => {
                   <div className="text-sm text-gray-400 bg-gray-700/50 rounded-lg p-3">
                     {profile.stats}
                   </div>
-                  
+
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -159,7 +138,7 @@ const CodingProfiles = () => {
         </div>
 
         {/* Quick Stats Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.8 }}
@@ -189,7 +168,7 @@ const CodingProfiles = () => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.div>
   );

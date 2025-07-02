@@ -7,19 +7,19 @@ const Skills = () => {
     {
       title: "Frontend Development",
       skills: [
-        { name: "React/Next.js", level: 95, color: "from-blue-500 to-cyan-500" },
+        { name: "React.js", level: 95, color: "from-blue-500 to-cyan-500" },
         { name: "TypeScript", level: 90, color: "from-blue-600 to-blue-800" },
-        { name: "Tailwind CSS", level: 92, color: "from-teal-500 to-cyan-600" },
-        { name: "Framer Motion", level: 85, color: "from-purple-500 to-pink-500" }
+        { name: "JavaScript", level: 92, color: "from-teal-500 to-cyan-600" },
+        { name: "Material UI", level: 85, color: "from-purple-500 to-pink-500" }
       ]
     },
     {
       title: "Backend Development",
       skills: [
         { name: "Node.js", level: 88, color: "from-green-500 to-emerald-600" },
-        { name: "Python", level: 82, color: "from-yellow-500 to-orange-500" },
-        { name: "PostgreSQL", level: 85, color: "from-indigo-500 to-purple-600" },
-        { name: "MongoDB", level: 80, color: "from-green-600 to-green-800" }
+        { name: "Express.js", level: 82, color: "from-yellow-500 to-orange-500" },
+        { name: "MongoDB", level: 85, color: "from-indigo-500 to-purple-600" },
+        { name: "SQL", level: 40, color: "from-green-600 to-green-800" }
       ]
     },
     {
@@ -27,8 +27,8 @@ const Skills = () => {
       skills: [
         { name: "Git/GitHub", level: 93, color: "from-gray-600 to-gray-800" },
         { name: "Docker", level: 78, color: "from-blue-500 to-blue-700" },
-        { name: "AWS", level: 75, color: "from-orange-500 to-red-600" },
-        { name: "Three.js", level: 70, color: "from-purple-600 to-indigo-700" }
+        { name: "Postman", level: 75, color: "from-orange-500 to-red-600" },
+        { name: "Vs Code", level: 70, color: "from-purple-600 to-indigo-700" }
       ]
     }
   ];
@@ -70,22 +70,22 @@ const Skills = () => {
               <h2 className="text-2xl font-bold text-white mb-6 text-center">
                 {category.title}
               </h2>
-              
+
               <div className="space-y-6">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ 
-                      delay: 0.2 + (categoryIndex * 0.1) + (skillIndex * 0.1), 
-                      duration: 0.6 
+                    transition={{
+                      delay: 0.2 + (categoryIndex * 0.1) + (skillIndex * 0.1),
+                      duration: 0.6
                     }}
                     className="space-y-2"
                   >
                     <div className="flex justify-between items-center">
                       <span className="text-gray-200 font-medium">{skill.name}</span>
-                      <motion.span 
+                      <motion.span
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 + (categoryIndex * 0.1) + (skillIndex * 0.1) }}
@@ -94,13 +94,13 @@ const Skills = () => {
                         {skill.level}%
                       </motion.span>
                     </div>
-                    
+
                     <div className="relative">
                       <div className="h-3 bg-gray-700 rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${skill.level}%` }}
-                          transition={{ 
+                          transition={{
                             delay: 0.8 + (categoryIndex * 0.1) + (skillIndex * 0.1),
                             duration: 1.2,
                             ease: "easeOut"
@@ -119,7 +119,7 @@ const Skills = () => {
         </div>
 
         {/* Achievement Stats */}
-        <motion.div
+        {/* <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
@@ -146,7 +146,7 @@ const Skills = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.div>
   );

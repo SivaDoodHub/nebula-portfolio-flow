@@ -14,7 +14,7 @@ const Index = () => {
       className="relative min-h-screen flex items-center justify-center z-10"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-gray-900/40" />
-      
+
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -24,7 +24,7 @@ const Index = () => {
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Creative Developer
+              Mern Stack Developer
             </span>
           </h1>
           <motion.div
@@ -70,7 +70,7 @@ const Index = () => {
               </Button>
             </Link>
           </motion.div>
-          
+
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -96,7 +96,7 @@ const Index = () => {
         </motion.div>
 
         {/* Floating Achievement Cards */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
@@ -107,10 +107,10 @@ const Index = () => {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             className="bg-gray-800/80 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-center"
           >
-            <div className="text-2xl font-bold text-blue-400">50+</div>
+            <div className="text-2xl font-bold text-blue-400">2+</div>
             <div className="text-sm text-gray-300">Projects</div>
           </motion.div>
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -123,7 +123,7 @@ const Index = () => {
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             className="bg-gray-800/80 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-center"
           >
-            <div className="text-2xl font-bold text-purple-400">3+</div>
+            <div className="text-2xl font-bold text-purple-400">2</div>
             <div className="text-sm text-gray-300">Years Exp</div>
           </motion.div>
         </motion.div>

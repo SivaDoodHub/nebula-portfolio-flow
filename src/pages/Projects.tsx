@@ -6,18 +6,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and MongoDB",
+      title: "Portfolio Website",
+      description: "This is my portfolio website built with React, Node.js, and Tailwind. It is a simple and elegant website that showcases my projects and skills.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com",
-      demo: "https://demo.com"
+      tech: ["React", "Tailwind", "Framer Motion", "React Router"],
+      github: "https://github.com/SivaDoodHub/nebula-portfolio-flow.git",
+      demo: "https://github.com/SivaDoodHub/nebula-portfolio-flow.git"
     },
     {
-      title: "AI Chat Application",
-      description: "Real-time chat app with AI integration and modern UI",
-      image: "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=500&h=300&fit=crop",
-      tech: ["React", "WebSocket", "OpenAI", "TypeScript"],
+      title: "SmartDrain",
+      description: "As part of this vision, I’ve already started working on an innovative idea called SmartDrain — a web application designed to monitor drainage conditions and predict flood risks in real time.",
+      image: "/SmartDrain.png",
+      tech: ["React", "Mongo", "Express", "Node"],
       github: "https://github.com",
       demo: "https://demo.com"
     },
@@ -25,34 +25,10 @@ const Projects = () => {
       title: "Task Management System",
       description: "Collaborative project management tool with drag-and-drop",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-      tech: ["Vue.js", "Express", "PostgreSQL", "Socket.io"],
+      tech: ["React", "Mongo", "Express", "Node"],
       github: "https://github.com",
       demo: "https://demo.com"
     },
-    {
-      title: "Weather Dashboard",
-      description: "Beautiful weather app with location-based forecasting",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop",
-      tech: ["React", "OpenWeather API", "Chart.js", "PWA"],
-      github: "https://github.com",
-      demo: "https://demo.com"
-    },
-    {
-      title: "Portfolio Website",
-      description: "Responsive portfolio with advanced animations and 3D elements",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
-      tech: ["React", "Three.js", "Framer Motion", "Tailwind"],
-      github: "https://github.com",
-      demo: "https://demo.com"
-    },
-    {
-      title: "Crypto Tracker",
-      description: "Real-time cryptocurrency tracking with advanced charts",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=500&h=300&fit=crop",
-      tech: ["Next.js", "CoinGecko API", "Recharts", "Redis"],
-      github: "https://github.com",
-      demo: "https://demo.com"
-    }
   ];
 
   return (
@@ -101,7 +77,7 @@ const Projects = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                
+
                 <CardHeader>
                   <CardTitle className="text-white group-hover:text-blue-400 transition-colors">
                     {project.title}
