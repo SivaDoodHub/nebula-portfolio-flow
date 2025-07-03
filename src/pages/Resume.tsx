@@ -1,10 +1,11 @@
-
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-
-
+import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 const Resume = () => {
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+
   const handleDownload = () => {
     // In a real app, this would download the actual resume file
     const link = document.createElement('a');
@@ -63,18 +64,49 @@ const Resume = () => {
             </p>
           </div>
 
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Button
-              onClick={handleDownload}
-              size="lg"
-              className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white px-12 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Download Resume (PDF)
-            </Button>
-          </motion.div>
+              <Button
+                onClick={handleDownload}
+                size="lg"
+                className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Download Resume
+              </Button>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Dialog open={isPreviewOpen} onOpenChange={setIsPreviewOpen}>
+                <DialogTrigger asChild>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    Preview Resume
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto bg-gray-900 border-gray-700">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl font-bold text-white">Resume Preview</DialogTitle>
+                  </DialogHeader>
+                  <div className="mt-4">
+                    <img
+                      src="/Mern_stack.png"
+                      alt="Resume Preview"
+                      className="w-full h-auto rounded-lg shadow-lg"
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </motion.div>
+          </div>
         </motion.div>
 
         {/* Resume Preview Section */}
