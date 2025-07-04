@@ -30,6 +30,7 @@ const Resume = () => {
       className="relative min-h-screen pt-24 pb-12 z-10"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
