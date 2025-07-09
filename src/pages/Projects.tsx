@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import calculatorImage from "/calculator.png";
 
 const Projects = () => {
   const projects = [
@@ -10,7 +11,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
       tech: ["React", "Tailwind", "Framer Motion", "React Router"],
       github: "https://github.com/SivaDoodHub/nebula-portfolio-flow.git",
-      demo: "https://github.com/SivaDoodHub/nebula-portfolio-flow.git"
+      demo: "https://portfolio-demo-f6a42.web.app/"
     },
     {
       title: "SmartDrain",
@@ -21,12 +22,12 @@ const Projects = () => {
       demo: "https://demo.com"
     },
     {
-      title: "Task Management System",
-      description: "Collaborative project management tool with drag-and-drop",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-      tech: ["React", "Mongo", "Express", "Node"],
-      github: "https://github.com",
-      demo: "https://demo.com"
+      title: "Modern Calculator",
+      description: "A modern calculator web application built with HTML, CSS, and JavaScript. It is a simple and elegant calculator that showcases my skills in web development.",
+      image: "/calculator.png",
+      tech: ["HTML", "CSS", "JavaScript"],
+      github: "https://github.com/SivaDoodHub/Modern-Calculator-Web-Application.git",
+      demo: "https://moderncalculatorwebapplication.web.app/"
     },
   ];
 
