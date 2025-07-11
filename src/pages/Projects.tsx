@@ -14,12 +14,12 @@ const Projects = () => {
       demo: "https://portfolio-demo-f6a42.web.app/"
     },
     {
-      title: "SmartDrain",
-      description: "As part of this vision, I've already started working on an innovative idea called SmartDrain — a web application designed to monitor drainage conditions and predict flood risks in real time.",
-      image: "/SmartDrain.png",
-      tech: ["React", "Mongo", "Node", "Express", "Tailwind"],
-      github: "https://github.com",
-      demo: "https://demo.com"
+      title: "Life Safe Track",
+      description: "Life Safe Track is a web application designed to monitor the health of the user and provide a platform for the user to track their health and well-being.",
+      image: "/lifesafetrack.jpg",
+      tech: ["React", "HTML", "CSS", "JavaScript"],
+      github: "https://github.com/SivaDoodHub/lifesafe-connect-hub.git",
+      demo: "https://lifesafetrack.web.app/"
     },
     {
       title: "Modern Calculator",
